@@ -34,7 +34,6 @@ application.elements.inputs.taskInput.addEventListener("keypress", (event) => {
         let txt = document.createTextNode(application.elements.inputs.taskInput.value);
         el.appendChild(txt);
         if(el && txt.length) {
-            console.dir(application.elements.inputs.checkBoxInput);
             application.elements.inputs.taskInput.blur();
             application.elements.inputs.checkBoxInput.checked ? application.utils.methods.addHighPrTask(application.elements.list,el) : application.elements.list.appendChild(el);
             event.target.value = "";
