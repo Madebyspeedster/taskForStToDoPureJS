@@ -1,12 +1,32 @@
 * {
     font-family: "Arial Black", fantasy;
 }
+
 html body {
     background: deepskyblue;
     margin: 80px;
 }
+
+.folder_section .folder_block {
+    transition: all .3s;
+}
+
+.folder_section .folder_block img {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.folder_section .folder_block p {
+    color: #ffffff;
+    position: relative;
+    top: 50px;
+    font-weight: lighter;
+}
+
 .todo_container {
-    transform: scale(1.5);
+    transform: scale(0);
     position: relative;
     color: #303030;
     background-color: lightgoldenrodyellow;
@@ -18,7 +38,15 @@ html body {
     box-shadow: 0 16px 35px 1px #303030;
     overflow: hidden;
 }
-.todo_container .todo_main_text{
+
+.todo_container span {
+    position: absolute;
+    right: 10px;
+    color: tomato;
+    cursor: pointer;
+}
+
+.todo_container .todo_main_text {
     font-size: 30px;
     color: inherit;
     position: absolute;
@@ -27,11 +55,13 @@ html body {
     top: -11px;
     transform: rotate(30deg);
 }
-.todo_container .todo_input_container{
+
+.todo_container .todo_input_container {
     margin: 10px 0;
     width: 100%;
 }
-.todo_container .todo_input_container .todo_input{
+
+.todo_container .todo_input_container .todo_input {
     width: 50%;
     border: none;
     border-bottom: 2px solid gray;
@@ -39,17 +69,20 @@ html body {
     padding: 0 5px;
     background: inherit;
 }
+
 .todo_container .todo_input_container .todo_input:focus {
     border-bottom: 2px solid tomato;
     width: calc(100% - 10px);
     transition: all .4s;
 }
+
 .todo_container .todo_buttons_container {
-    display:  flex;
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding-left: 5px;
 }
+
 .todo_container .todo_buttons_container .todo_button {
     cursor: pointer;
     border: none;
@@ -63,15 +96,18 @@ html body {
     position: relative;
     color: #303030;
 }
+
 .todo_container .todo_buttons_container .todo_button:active {
     top: 5px;
     box-shadow: 0 0 0 0;
 }
-.todo_container .todo_checkbox_container{
+
+.todo_container .todo_checkbox_container {
     display: flex;
     justify-content: flex-start;
     margin: 5px 0;
 }
+
 .todo_container .todo_checkbox_container .todo_checkbox_label {
     font-size: 10px;
     text-transform: uppercase;
@@ -80,15 +116,18 @@ html body {
     text-decoration: underline tomato;
     line-height: 20px;
 }
+
 .todo_container .todo_list_container {
     height: 150px;
     width: 100%;
     overflow: auto;
 }
+
 .todo_container .todo_list_container .todo_list {
     list-style: none;
     padding: 0;
 }
+
 .todo_container .todo_list_container .todo_list li {
     padding-left: 5px;
     font-style: italic;
@@ -100,19 +139,25 @@ html body {
 }
 
 
-
 /*utils*/
 
 .taskComplete {
     text-decoration: line-through;
     transition: all .7s;
 }
-.highPr{
+
+.highPr {
     color: tomato;
     font-weight: bold;
 }
+
 input[type=checkbox] {
     cursor: pointer;
     transform: scale(1.5);
     outline: none;
+}
+
+.openTodoContainer {
+    transition: all .3s;
+    transform: scale(1.5);
 }

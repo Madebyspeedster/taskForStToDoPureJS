@@ -7,21 +7,28 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <section class="todo_container">
-            <h1 class="todo_main_text">Todo!</h1>
-        <div class="todo_input_container">
-            <input class="todo_input" type="text" placeholder="ADD A NEW TASK">
+<section class="folder_section">
+    <div class="folder_block">
+        <img class="folder_icon" src="./assets/folder.png" alt="folder">
+        <p>Todo.exe</p>
+    </div>
+</section>
+<section class="todo_container">
+    <h1 class="todo_main_text">Todo!</h1>
+    <span class="close_todo">X</span>
+    <div class="todo_input_container">
+        <input class="todo_input" type="text" placeholder="ADD A NEW TASK">
+    </div>
+    <div class="todo_buttons_container">
+        <div class="todo_checkbox_container">
+            <input class="todo_input_checkbox" type="checkbox" id="highPr">
+            <label class="todo_checkbox_label" for="highPr">High priority</label>
         </div>
-        <div class="todo_buttons_container">
-            <div class="todo_checkbox_container">
-                <input class="todo_input_checkbox" type="checkbox" id="highPr">
-                <label class="todo_checkbox_label" for="highPr">High priority</label>
-            </div>
-        </div>
-        <div class="todo_list_container">
-            <ul class="todo_list"></ul>
-        </div>
-    </section>
+    </div>
+    <div class="todo_list_container">
+        <ul class="todo_list"></ul>
+    </div>
+</section>
 </body>
 </html>
 
